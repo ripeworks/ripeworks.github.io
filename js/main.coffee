@@ -37,3 +37,8 @@ svg.append("rect")
   .style
     opacity: 0.5
     fill: t.url()
+
+
+# copyright date
+d3.selectAll(".year").text(new Date().getFullYear())
+

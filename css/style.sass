@@ -5,18 +5,39 @@
 
 @import "select"
 
+*
+  box-sizing: border-box
+
 body
   background: #261A43
+  color: white
+  color: rgba(255,255,255,.8)
   font-family: 'Dosis', sans-serif
+  font-size: 32px
+  font-weight: 300
   margin: 0
 
 html, body
   height: 100%
 
-a
+a:link, a:visited
+  color: #79D6EA
   text-decoration: none
 
+button, select, input
+  font-size: 1em
+
+h2
+  color: #FFE59C
+  font-weight: 300
+
+h5
+  color: white
+  margin-bottom: 0
+
 #site
+  max-width: 800px
+  margin: 0 auto
   padding: 5em 0
   position: relative
 
@@ -24,25 +45,63 @@ a
   position: absolute
   left: 0
   top: 0
-  right: 0
-  bottom: 0
+  height: 100%
+  width: 100%
+  // right: 0
+  // bottom: 0
 
 header
-  max-width: 800px
-  margin: 0 auto
   position: relative
 
-header h1
+header #logo
   background: url('/img/Logo@2x.png') no-repeat left top
   font-size: 60px
 
   a
     color: white
-    font-weight: 200
+    font-weight: 300
     padding-left: 84px
 
 header .select
+  font-size: 18px
   position: absolute
   right: 0
   top: 50%
   margin-top: -16px
+
+.intro
+  margin: 5em 0
+  text-align: center
+
+  h1
+    color: #B4F3E5
+    font-size: 68px
+    font-weight: 200
+    text-align: left
+
+    span
+      color: #00FCD6
+      display: block
+
+  button
+    background: none
+    border: 3px solid #eee
+    border-radius: .25rem
+    color: #eee
+    cursor: pointer
+    padding: .5rem 2rem
+    font-family: 'Dosis', sans-serif
+    font-weight: 300
+
+.row
+  margin-left: -1em
+  margin-right: -1em
+  overflow: hidden
+
+.col
+  float: left
+  padding: 0 1em
+  width: 50%
+
+footer
+  text-align: center
