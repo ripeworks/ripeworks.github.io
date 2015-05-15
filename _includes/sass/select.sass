@@ -1,0 +1,57 @@
+.select
+  position: relative
+  display: inline-block
+  color: #555
+
+  select
+    display: inline-block
+    width: 100%
+    margin: 0
+    padding: .5rem 2.25rem .5rem 1rem
+    line-height: 1.5
+    color: #555
+    background-color: #eee
+    border: 0
+    border-radius: .25rem
+    cursor: pointer
+    outline: 0
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+
+    &:focus
+      box-shadow: 0 0 0 0.075rem #fff, 0 0 0 .2rem #0074d9
+
+    &:active
+      color: #fff
+      background-color: #0074d9
+
+  &:after, &:before
+    position: absolute
+    top: 50%
+    right: 1.25rem
+    display: inline-block
+    content: ""
+    width: 0
+    height: 0
+    pointer-events: none
+    border: .35rem solid
+
+  &:after
+    margin-top: .1rem
+    border-right: .35rem solid transparent
+    border-bottom: .35rem solid transparent
+    border-left: .35rem solid transparent
+
+  &:before
+    margin-top: -.65rem
+    border-right: .35rem solid transparent
+    border-top: .35rem solid transparent
+    border-left: .35rem solid transparent
+
+.select select::-ms-expand
+  display: none
+
+.select select:focus:-moz-focusring
+  color: transparent
+  text-shadow: 0 0 0 #000
