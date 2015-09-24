@@ -20,12 +20,12 @@ svg.append("rect")
     width: "100%"
     height: "100%"
   .style
-    opacity: 0.15
+    opacity: 0.05
     fill: t.url()
 
 t = textures.circles()
   .size(90)
-  .radius(2)
+  .radius(1)
   .fill("white")
 
 svg.call t
@@ -35,10 +35,10 @@ svg.append("rect")
     width: "100%"
     height: "100%"
   .style
-    opacity: 0.5
+    opacity: 0.15
     fill: t.url()
 
 
 # copyright date
-d3.selectAll(".year").text(new Date().getFullYear())
+d3.selectAll("footer .year").text(new Date().getFullYear())
 

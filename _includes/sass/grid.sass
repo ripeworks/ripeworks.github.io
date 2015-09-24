@@ -1,0 +1,81 @@
+.container
+  margin: 0 auto
+  max-width: 800px
+  padding: 0 20px
+  position: relative
+
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+.col
+  float: left
+  width: 100%
+
+.buffer
+  margin-top: 3em
+  margin-bottom: 3em
+
+@media (min-width: 400px)
+  .container
+    padding: 0
+    width: 85%
+
+@media (min-width: 550px)
+  .container
+    width: 80%
+
+  .col
+    margin-left: 4%
+    &:first-child
+      margin-left: 0
+    &.one
+      width: 4.66666666667%
+    &.two
+      width: 13.3333333333%
+    &.three
+      width: 22%
+    &.four
+      width: 30.6666666667%
+    &.five
+      width: 39.3333333333%
+    &.six
+      width: 48%
+    &.seven
+      width: 56.6666666667%
+    &.eight
+      width: 65.3333333333%
+    &.nine
+      width: 74.0%
+    &.ten
+      width: 82.6666666667%
+    &.eleven
+      width: 91.3333333333%
+    &.twelve
+      width: 100%
+      margin-left: 0
+
+    &.offset-one
+      margin-left: 8.66666666667
+    &.offset-two
+      margin-left: 17.3333333333%
+    &.offset-three
+      margin-left: 26%
+    &.offset-four
+      margin-left: 34.6666666667%
+    &.offset-five
+      margin-left: 43.3333333333%
+    &.offset-six
+      margin-left: 52%
+    &.offset-seven
+      margin-left: 60.6666666667%
+    &.offset-eight
+      margin-left: 69.3333333333%
+    &.offset-nine
+      margin-left: 78.0%
+    &.offset-ten
+      margin-left: 86.6666666667%
+    &.offset-eleven
+      margin-left: 95.3333333333%
+

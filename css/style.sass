@@ -1,41 +1,61 @@
 ---
 ---
 
-@import url(http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700)
+@import url(http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700|Source+Code+Pro:400,300,200)
 
 @import "select"
+@import "grid"
+
+@mixin font-mono($transform: uppercase)
+  font-family: 'Source Code Pro', sans-serif
+  font-weight: 100
+  text-transform: $transform
+
+$color-bg: #261A43
+$color-link: #79D6EA
+$color-line: rgba(255, 255, 255, .25)
 
 *
   box-sizing: border-box
 
-body
-  background: #261A43
+html
   color: white
   color: rgba(255,255,255,.8)
   font-family: 'Dosis', sans-serif
-  font-size: 32px
+  font-size: 120%
   font-weight: 300
+
+body
+  background: $color-bg
   margin: 0
   position: relative
 
 a:link, a:visited
-  color: #79D6EA
+  color: $color-link
+  border-bottom: 1px solid
   text-decoration: none
+  transition: all .4s ease-in-out
+
+  &:hover
+    background: $color-link
+    color: $color-bg
 
 button, select, input
   font-size: 1em
 
+h2, h3, h4, h5, h6
+  @include font-mono
+
 h2
+  font-size: 1.25em
   color: #FFE59C
-  font-weight: 300
 
 h5
   color: white
   margin-bottom: 0
+  font-size: .8em
 
 #site
-  max-width: 800px
-  margin: 0 auto
   padding: 5em 0
   position: relative
 
@@ -48,7 +68,8 @@ h5
   width: 100%
 
 header
-  position: relative
+  @extend .container
+  overflow: hidden
 
 header #logo
   background: url('/img/Logo@2x.png') no-repeat left top
@@ -57,7 +78,11 @@ header #logo
   a
     color: white
     font-weight: 300
-    padding-left: 84px
+    padding-left: 1.4em
+    border: none
+    &:hover
+      background: none
+      color: white
 
 header .select
   font-size: 18px
@@ -67,12 +92,13 @@ header .select
   margin-top: -16px
 
 .intro
-  margin: 5em 0
+  margin-top: 5em
+  margin-bottom: 5em
   text-align: center
 
   h1
     color: #B4F3E5
-    font-size: 68px
+    font-size: 3.5em
     font-weight: 200
     text-align: left
 
@@ -82,23 +108,69 @@ header .select
 
   button
     background: none
-    border: 3px solid #eee
+    border: 1px solid #eee
     border-radius: .25rem
     color: #eee
     cursor: pointer
     padding: .5rem 2rem
     font-family: 'Dosis', sans-serif
-    font-weight: 300
+    font-weight: 100
 
-.row
-  margin-left: -1em
-  margin-right: -1em
-  overflow: hidden
+button
+  @include font-mono
+  font-size: 1em
+  transition: all .4s ease-in-out
 
-.col
-  float: left
-  padding: 0 1em
-  width: 50%
+  &:hover
+    background: white
+    color: $color-bg
 
 footer
-  text-align: center
+  @extend .container
+  @include font-mono(none)
+  font-size: .75em
+
+ul.list
+  list-style: none
+  padding: 0
+
+.projects
+  border-top: 1px solid $color-line
+  position: relative
+
+  .year
+    @include font-mono
+    font-size: .5em
+    margin-top: 5px
+
+  ul
+    margin: 0
+
+  li
+    overflow: hidden
+    padding: .25em 0
+    border-bottom: 1px solid $color-line
+
+  li:last-child
+    border: none
+
+  h5
+    margin: 0
+
+@media (max-width: 860px)
+  html
+    font-size: 108%
+
+  header #logo
+    font-size: 40px
+    background-size: auto 80%
+
+@media (max-width: 500px)
+  html
+    font-size: 96%
+
+@media (min-width: 550px)
+  .projects .year
+    position: absolute
+    left: 0
+    top: 0

@@ -1,6 +1,5 @@
 name: Ripeworks
 highlighter: pygments
-lsi: true
 permalink: /:title
 sass:
   sass_dir: _includes/sass
