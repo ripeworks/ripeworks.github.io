@@ -42,3 +42,8 @@ svg.append("rect")
 # copyright date
 d3.selectAll("footer .year").text(new Date().getFullYear())
 
+# navigation
+navigation = document.getElementById('nav')
+navigation.value = window.location.pathname
+navigation.onchange = (e) ->
+  window.location = e.target.value

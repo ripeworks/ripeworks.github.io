@@ -8,21 +8,13 @@
   <title>{{ page.title }}</title>
   <meta name="description" content="Ripeworks is a web studio based in Leelanau County, Northport, Michigan. Ready to tackle any web, mobile, or software development project.">
   <link href="/css/style.css" rel="stylesheet">
+  <script src="https://use.typekit.net/euo8rwv.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
-<body>
+<body class="alt">
   <div id="graph"></div>
   <div id="site">
-    <header>
-      <h1 id="logo"><a href="">Ripeworks</a></h1>
-      <div class="select">
-        <select aria-label="Navigation menu">
-          <option>Home</option>
-          <option>About</option>
-          <option>Articles</option>
-          <option>Work</option>
-        </select>
-      </div>
-    </header>
+    {% include header.html %}
     {{content}}
   </div>
   <script src="/js/vendor.js"></script>

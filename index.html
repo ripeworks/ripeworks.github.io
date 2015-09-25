@@ -1,92 +1,31 @@
 ---
-layout: default
+layout: home
 ---
 
 <div class="container intro">
   <h1>Full service web studio, <span>ready to pick.</span></h1>
-  <button type="button">Contact</button>
-</div>
-
-<div class="latest">
-
 </div>
 
 <section>
   <div class="container">
-    <div class="col twelve">
-      <h2>Projects</h2>
-    </div>
-    <div class="col twelve projects">
-      <span class="year">PRODUCTS</span>
-      <ul class="list col offset-three nine">
-        <li>
-          <h5>Fridge</h5>
-        </li>
-        <li>
-          <h5>Pomander</h5>
-        </li>
-        <li>
-          <h5>Rack'em</h5>
-        </li>
-        <li>
-          <h5>Old Toby</h5>
-        </li>
-      </ul>
-    </div>
-    <div class="col twelve projects">
-      <span class="year">ONGOING</span>
-      <ul class="list col offset-three nine">
-        <li>
-          <h5>Saxon Inc.</h5>
-        </li>
-        <li>
-          <h5>Popfunk</h5>
-        </li>
-      </ul>
-    </div>
-    <div class="col twelve projects">
-      <span class="year">Y-2015</span>
-      <ul class="list col offset-three nine">
-        <li>
-          <h5>Trevco</h5>
-        </li>
-      </ul>
-    </div>
-    <div class="col twelve projects">
-      <span class="year">Y-2014</span>
-      <ul class="list col offset-three nine">
-        <li>
-          <h5>NFL Fantasy Football iOS</h5>
-        </li>
-        <li>
-          <h5>Access Family Law</h5>
-        </li>
-      </ul>
-    </div>
-    <div class="col twelve projects">
-      <span class="year">Y-2013</span>
-      <ul class="list col offset-three nine">
-        <li>
-          <h5>Versicor</h5>
-        </li>
-        <li>
-          <h5>Drive Retail Marketing</h5>
-        </li>
-        <li>
-          <h5>Jet's Pizza</h5>
-        </li>
-      </ul>
+    <div class="col three"><h3>Latest</h3></div>
+    <div class="col seven">
+      <p>
+        {% for post in site.posts limit:1 %}
+          <a class="latest" href="{{post.url}}">+ <span>Blog:</span> {{post.title}}</a>
+        {% endfor %}
+      </p>
     </div>
   </div>
 </section>
 
 <section class="contact">
   <div class="container buffer">
-    <div class="col six">
-      <h2>Contact</h2>
-      <p>Get in touch to find out more about what we do, ask questions, talk about a project or just to say hi.</p>
+    <div class="col three">
+      <h3>Contact</h3>
     </div>
-    <div class="col six">
+    <div class="col seven">
+      <p>Get in touch to find out more about what we do, ask questions, talk about a project or just to say hi.</p>
       <h5>Say hello</h5>
       <p><a href="">mike@ripeworks.com</a></p>
 
