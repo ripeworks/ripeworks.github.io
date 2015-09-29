@@ -17,14 +17,17 @@
     {% include header.html %}
     <article>
       <div class="container">
-        <div class="col three">
+        <div class="col three animate-in-2">
           <h3>{{ page.date | date_to_string }}</h3>
+          <a href="/articles/">< More</a>
         </div>
-        <div class="col nine">
-          <h1>{{page.title}}</h1>
+        <div class="col nine animate-in-2">
+          <h1 class="post-title">{{page.title}}</h1>
+        </div>
+        <div class="col twelve animate-in-3">
+          {{content}}
         </div>
       </div>
-      {{content}}
     </article>
   </div>
   <script src="/js/vendor.js"></script>

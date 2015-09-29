@@ -43,8 +43,14 @@ svg.append("rect")
 d3.selectAll("footer .year").text(new Date().getFullYear())
 
 # navigation
+currentPage = (nav) ->
+  for option in nav.options
+    if option.value == window.location.pathname
+      return window.location.pathname
+  '/articles/'
+
 navigation = document.getElementById('nav')
-navigation.value = window.location.pathname
+navigation.value = currentPage(navigation)
 navigation.onchange = (e) ->
   window.location = e.target.value
 

@@ -18,7 +18,7 @@ package
     import flash.events.ErrorEvent;
     import flash.events.UncaughtErrorEvent;
     import flash.external.ExternalInterface;
-    
+
     public class Console extends Sprite
     {
         public function Console():void
@@ -26,22 +26,22 @@ package
             super();
             init();
         }
-        
+
         public static function log(... arguments):void
         {
             Console.trace(arguments);
         }
-        
+
         public static function warn(... arguments):void
         {
             Console.trace(arguments, "warn");
         }
-        
+
         public static function error(... arguments):void
         {
             Console.trace(arguments, "error");
         }
-        
+
         private static function trace(args:Object,type:String = "log"):void
         {
             for(var i:String in args)
@@ -52,13 +52,13 @@ package
                 if( type == "log") trace(args[i]);
             }
         }
-        
+
         private function init():void
         {
             if(loaderInfo.hasOwnProperty("uncaughtErrorEvents"))
                 loaderInfo.uncaughtErrorEvents.addEventListener(UncaughtErrorEvent.UNCAUGHT_ERROR, uncaughtErrorHandler, false, 0, true);
         }
-        
+
         private function uncaughtErrorHandler(e:UncaughtErrorEvent):void
         {
             if( e.error is Error)

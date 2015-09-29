@@ -1,0 +1,191 @@
+$bg: #0D100E
+$fg: #52685C
+$black: #202924
+$red: #768b7d
+$green: #9baaa0
+$yellow: $red
+$blue: $green
+$magenta: #768b7d
+$cyan: $magenta
+$white: $fg
+$white_light: #fff
+
+$comment: $black
+$error: $red
+$keyword: $blue
+$comment_multiline: $comment
+$comment_preproc: $comment
+$comment_single: $comment
+$comment_special: $comment
+$generic_deleted: $fg
+$generic_emph: $fg
+$generic_error: $fg
+$generic_heading: $fg
+$generic_inserted: $fg
+$generic_output: $fg
+$generic_prompt: $fg
+$generic_strong: $fg
+$generic_subheading: $fg
+$generic_traceback: $fg
+$keyword_constant: $keyword
+$keyword_declaration: $keyword
+$keyword_namespace: $keyword
+$keyword_pseudo: $keyword
+$keyword_reserved: $keyword
+$keyword_type: $keyword
+$number: $magenta
+$string: $yellow
+$name: $blue
+$name_attribute: $name
+$name_builtin: $name
+$name_class: $name
+$name_constant: $name
+$name_decorator: $name
+$name_entity: $name
+$name_function: $name
+$name_namespace: $name
+$name_tag: $name
+$name_variable: $name
+$operator_word: $name
+$whitespace: $black
+$literal_number_float: $number
+$literal_number_hex: $number
+$literal_number_integer: $number
+$literal_number_oct: $number
+$string_backtick: $string
+$string_char: $string
+$string_doc: $string
+$string_double: $string
+$string_escape: $string
+$string_heredoc: $string
+$string_interpol: $string
+$string_other: $string
+$string_regex: $string
+$string_single: $string
+$string_symbol: $string
+$name_builtin_pseudo: #fff
+$name_variable_class: #fff
+$name_variable_global: #fff
+$name_variable_instance: #fff
+$integer_long: $number
+
+.highlight
+  color: $fg
+
+.highlight pre
+  background: $bg
+
+.highlighttable
+  background: $bg
+  border-collapse: collapse
+  border-spacing: 0
+  table-layout: fixed
+  width: 100%
+
+  .linenos
+    width: 30px
+    text-align: right
+    code
+      color: $black
+
+  td.code
+    overflow: auto
+
+code, .highlight
+  .c
+    color: $comment
+    font-style: italic
+  .err
+    color: $error
+  .k, .o
+    font-weight: bold
+  .cm
+    color: $comment_multiline
+    font-style: italic
+  .cp
+    color: $comment_preproc
+    font-weight: bold
+  .c1
+    color: $comment_single
+    font-style: italic
+  .cs
+    color: $comment_special
+    font-weight: bold
+    font-style: italic
+  .gd
+    color: $generic_deleted
+    background-color: #ffdddd
+    .x
+      color: #000000
+      background-color: #ffaaaa
+  .ge
+    font-style: italic
+  .gr
+    color: $generic_error
+  .gh
+    color: $generic_heading
+  .gi
+    color: $generic_inserted
+    background-color: #ddffdd
+    .x
+      color: #000000
+      background-color: #aaffaa
+  .go
+    color: $generic_output
+  .gp
+    color: $generic_prompt
+  .gs
+    font-weight: bold
+  .gu
+    color: $generic_subheading
+  .gt
+    color: $generic_traceback
+  .kc, .kd, .kp, .kr
+    font-weight: bold
+  .kt
+    color: $keyword_type
+    font-weight: bold
+  .m
+    color: $number
+  .s
+    color: $string
+  .na
+    color: $name_attribute
+  .nb
+    color: $name_builtin
+  .nc
+    color: $name_class
+    font-weight: bold
+  .no
+    color: $name_constant
+  .ni
+    color: #800080
+  .ne, .nf
+    color: $name_entity
+    font-weight: bold
+  .nn
+    color: $name_namespace
+  .nt
+    color: $name_tag
+  .nv
+    color: $name_variable
+  .ow
+    font-weight: bold
+  .w
+    color: $whitespace
+  .mf, .mh, .mi, .mo
+    color: $number
+  .sb, .sc, .sd, .s2, .se, .sh, .si, .sx
+    color: $string
+  .sr
+    color: $string_regex
+  .s1
+    color: $string_single
+  .ss
+    color: $string_symbol
+  .bp
+    color: $name_builtin_pseudo
+  .vc, .vg, .vi
+    color: $name_variable
+  .il
+    color: $integer_long

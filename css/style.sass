@@ -8,6 +8,7 @@
 @import "utils"
 @import "animations"
 @import "heatmap"
+@import "code-highlight"
 
 @mixin font-mono($transform: uppercase)
   font-family: 'mplus-1m', sans-serif
@@ -176,15 +177,12 @@ code
   padding: .1em .4em
 
 pre
-  white-space: pre-wrap
+  // white-space: pre-wrap
 
   code
     background: transparent
     color: white
     word-wrap: break-word
-
-.highlight pre
-  background: #111111
 
 @import "work"
 @import "posts"
