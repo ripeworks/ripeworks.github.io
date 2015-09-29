@@ -1,0 +1,33 @@
+.projects
+  border-top: 1px solid $color-line
+  position: relative
+
+  .year
+    @include font-mono
+    font-size: .65em
+    margin-top: 5px
+
+  ul
+    margin: 0
+
+  li
+    overflow: hidden
+    padding: .4em 0
+    border-bottom: 1px solid $color-line
+
+  li:last-child
+    border: none
+
+  h5
+    margin: 0
+
+  label
+    font-size: .7em
+    text-transform: uppercase
+    color: rgba(255,255,255,.4)
+
+@media (min-width: 550px)
+  .projects .year
+    position: absolute
+    left: 0
+    top: 0

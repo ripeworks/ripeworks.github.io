@@ -47,3 +47,26 @@ navigation = document.getElementById('nav')
 navigation.value = window.location.pathname
 navigation.onchange = (e) ->
   window.location = e.target.value
+
+# stagger animated lists
+delay = 400
+for el in document.querySelectorAll('.animate-in-stagger')
+  dynamics.css(el, {opacity: 0})
+  dynamics.animate(el, {
+    opacity: 1
+  }, {
+    type: dynamics.spring
+    delay: delay
+  })
+  delay += 50
+
+# heatmap
+cal = new CalHeatMap()
+cal.init
+  itemSelector: '#heatmap'
+  cellRadius: 5
+  cellSize: 5
+  cellPadding: 4
+  domainGutter: 0
+  displayLegend: false
+  range: 100

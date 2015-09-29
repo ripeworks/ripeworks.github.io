@@ -1,13 +1,16 @@
-.container
-  margin: 0 auto
-  max-width: 700px
-  padding: 0 20px
+.row
   position: relative
 
   &:after
     content: ""
     display: table
     clear: both
+
+.container
+  @extend .row
+  margin: 0 auto
+  max-width: 700px
+  padding: 0 20px
 
 .col
   float: left

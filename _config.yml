@@ -1,5 +1,6 @@
 name: Ripeworks
-highlighter: pygments
 permalink: /:title
 sass:
   sass_dir: _includes/sass
+kramdown:
+  input: GFM

@@ -1,15 +1,17 @@
 ---
 layout: home
+title: Ripeworks
 ---
 
 <div class="container intro">
-  <h1>Full service web studio, <span>ready to pick.</span></h1>
+  <h1 class="animate-bounce">Full service web studio, <span>ready to pick.</span></h1>
 </div>
+
 
 <section>
   <div class="container">
-    <div class="col three"><h3>Latest</h3></div>
-    <div class="col seven">
+    <div class="col three animate-in-2"><h3>Latest</h3></div>
+    <div class="col seven animate-in-3">
       <p>
         {% for post in site.posts limit:1 %}
           <a class="latest" href="{{post.url}}">+ <span>Blog:</span> {{post.title}}</a>
@@ -21,10 +23,10 @@ layout: home
 
 <section class="contact">
   <div class="container buffer">
-    <div class="col three">
+    <div class="col three animate-in-2">
       <h3>Contact</h3>
     </div>
-    <div class="col seven">
+    <div class="col seven animate-in-3">
       <p>Get in touch to find out more about what we do, ask questions, talk about a project or just to say hi.</p>
       <h5>Say hello</h5>
       <p><a href="">mike@ripeworks.com</a></p>
