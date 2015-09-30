@@ -1,4 +1,4 @@
-$bg: #0D100E
+$bg: rgba(13, 16, 14, .7)
 $fg: #52685C
 $black: #202924
 $red: #768b7d
@@ -70,10 +70,12 @@ $name_variable_instance: #fff
 $integer_long: $number
 
 .highlight
-  color: $fg
-
-.highlight pre
   background: $bg
+  color: $fg
+  padding: .5em
+
+  pre
+    margin: 0
 
 .highlighttable
   background: $bg
@@ -81,6 +83,9 @@ $integer_long: $number
   border-spacing: 0
   table-layout: fixed
   width: 100%
+
+  .highlight
+    background: transparent
 
   .linenos
     width: 30px

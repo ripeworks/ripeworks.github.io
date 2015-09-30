@@ -167,7 +167,7 @@ ul.list li:before
   content: ''
 
 .col.three h3
-  margin: .75em 0
+  margin: .75em 0 .25em 0
 
 .alt
   // background: white
@@ -190,18 +190,17 @@ blockquote
   padding: 0 1em
 
 code
-  background-color: #FFEEBF
-  color: #333
+  background: rgba(255,255,255,.1)
+  @include font-mono(none)
+  font-weight: 200
   border-radius: 3px
   padding: .1em .4em
 
-pre
-  // white-space: pre-wrap
-
-  code
-    background: transparent
-    color: white
-    word-wrap: break-word
+pre code
+  background: transparent
+  color: white
+  font-family: monospace
+  word-wrap: break-word
 
 .pill
   border: 1px solid
