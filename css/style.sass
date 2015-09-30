@@ -1,7 +1,7 @@
 ---
 ---
 
-@import url(http://fonts.googleapis.com/css?family=Dosis:300|Source+Code+Pro:400,300,200)
+@import url(http://fonts.googleapis.com/css?family=Dosis:300|Lato:100,300,400)
 
 @import "select"
 @import "grid"
@@ -12,11 +12,12 @@
 
 @mixin font-mono($transform: uppercase)
   font-family: 'mplus-1m', sans-serif
-  font-weight: 100
+  font-weight: 200
   text-transform: $transform
 
-$color-bg: rgb(18, 34, 51)
+$color-bg: #114FBB
 $color-link: #79D6EA
+$color-link-border: rgba(121, 214, 234, .7)
 $color-line: rgba(255, 255, 255, .25)
 
 *
@@ -24,10 +25,13 @@ $color-line: rgba(255, 255, 255, .25)
 
 html
   color: white
-  color: rgba(255,255,255,.8)
+  color: rgba(255,255,255,.9)
   @include font-mono(none)
   font-size: 120%
   height: 100%
+  text-size-adjust: none
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
 
 body
   background: $color-bg
@@ -37,7 +41,7 @@ body
   min-height: 100%
 
 a:link, a:visited
-  border-bottom: 1px solid
+  border-bottom: 1px solid $color-link-border
   color: $color-link
   display: inline-block
   text-decoration: none
@@ -45,13 +49,14 @@ a:link, a:visited
 
   &:hover
     background: $color-link
+    border-color: transparent
     color: $color-bg
 
 button, select, input
   font-size: 1em
 
 h3, h4, h5, h6
-  font-weight: 100
+  font-weight: 200
   text-transform: uppercase
 
 h1, h2
@@ -106,7 +111,8 @@ header .select
   margin-top: -16px
 
 .intro
-  padding: 3.5em 0
+  padding-top: 3.5em
+  padding-bottom: 3.5em
   margin: 2em auto
 
   h1
@@ -147,14 +153,21 @@ button
 footer
   @extend .container
   @include font-mono(none)
-  font-size: .75em
+  font-size: .9em
 
-ul.list
-  list-style: none
+ul, ol
   padding: 0
 
+ul
+  list-style: none
+  li:before
+    content: '+ '
+
+ul.list li:before
+  content: ''
+
 .col.three h3
-  margin-top: .75em
+  margin: .75em 0
 
 .alt
   // background: white
@@ -164,6 +177,12 @@ ul.list
 
 article
   line-height: 1.66667
+  font-family: 'Lato', sans-serif
+  font-weight: 300
+
+  h1, h2, h3, h4, h5, h6
+    font-family: 'mplus-1m', sans-serif
+    font-weight: 100
 
 blockquote
   border-left: 1px solid rgba(144, 246, 233, 0.7)
@@ -184,6 +203,13 @@ pre
     color: white
     word-wrap: break-word
 
+.pill
+  border: 1px solid
+  border-radius: 3px
+  padding: .25em .5em
+  font-size: .9em
+
+@import "about"
 @import "work"
 @import "posts"
 
@@ -200,6 +226,16 @@ pre
     font-size: 96%
 
 @media (max-width: 400px)
+  #site
+    padding: 3em 0
+
+  .intro
+    padding-top: 2.5em
+    padding-bottom: 2.5em
+
+    h1
+      font-size: 2.5em
+
   header .select
     display: block
     position: relative

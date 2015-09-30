@@ -12,11 +12,11 @@ title: Ripeworks
   <div class="container">
     <div class="col three animate-in-2"><h3>Latest</h3></div>
     <div class="col seven animate-in-3">
-      <p>
+      <ul>
         {% for post in site.posts limit:1 %}
-          <a class="latest" href="{{post.url}}">+ <span>Blog:</span> {{post.title}}</a>
+          <li><a class="latest" href="{{post.url}}"><span>Blog:</span> {{post.title}}</a></li>
         {% endfor %}
-      </p>
+      </ul>
     </div>
   </div>
 </section>
@@ -29,10 +29,12 @@ title: Ripeworks
     <div class="col seven animate-in-3">
       <p>Get in touch to find out more about what we do, ask questions, talk about a project or just to say hi.</p>
       <h5>Say hello</h5>
-      <p><a href="">mike@ripeworks.com</a></p>
+      <p><a href="mailto:mike@ripeworks.com">mike@ripeworks.com</a></p>
 
-      <h5>Project inquiries</h5>
-      <p><a href="">Project quote form</a></p>
+      <h5>Follow</h5>
+      <p><a href="https://twitter.com/ripeworks" target="_blank">@ripeworks</a>&nbsp;
+        <a href="https://github.com/ripeworks" target="_blank">github</a>
+      </p>
     </div>
   </div>
 </section>
