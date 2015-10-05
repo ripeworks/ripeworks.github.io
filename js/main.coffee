@@ -67,12 +67,12 @@ for el in document.querySelectorAll('.animate-in-stagger')
   delay += 50
 
 # heatmap
-cal = new CalHeatMap()
-cal.init
-  itemSelector: '#heatmap'
-  cellRadius: 5
-  cellSize: 5
-  cellPadding: 4
-  domainGutter: 0
-  displayLegend: false
-  range: 100
+# cal = new CalHeatMap()
+# cal.init
+#   itemSelector: '#heatmap'
+#   cellRadius: 5
+#   cellSize: 5
+#   cellPadding: 4
+#   domainGutter: 0
+#   displayLegend: false
+#   range: 100
