@@ -2,7 +2,12 @@
   <div class="row">
     <div class="col six">
       <label>Name</label>
-      <h5>{{include.project.name}}</h5>
+      <h5>
+        {{include.project.name}}
+        {% if include.project.link %}
+          <a href="{{include.project.link}}" class="project-link" target="_blank">View project</a>
+        {% endif %}
+      </h5>
     </div>
     <div class="col six text-right">
       <label>Tech</label>
