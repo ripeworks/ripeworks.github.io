@@ -27,6 +27,14 @@ title: Work | Ripeworks
       </ul>
     </div>
     <div class="col twelve projects">
+      <span class="year animate-in-2">Y-2016</span>
+      <ul class="list col offset-three nine">
+        {% for project in site.data.projects2016 %}
+          {% include project.html project=project %}
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="col twelve projects">
       <span class="year animate-in-2">Y-2015</span>
       <ul class="list col offset-three nine">
         {% for project in site.data.projects2015 %}
