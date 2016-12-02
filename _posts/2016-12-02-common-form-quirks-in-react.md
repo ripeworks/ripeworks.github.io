@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Common Form Quirks in React
-dateL 2016-12-02 9:55
+date: 2016-12-02 9:55
 ---
 
 After using React for many web projects both big and small, there were a handful of issues with form fields that needed to be addressed. These problems specifically relate to using *controlled* inputs where the state is entirely in React and synced to the dom.
