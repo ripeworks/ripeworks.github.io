@@ -4,6 +4,7 @@
 
   .year
     @include font-mono
+    font-weight: bold
     font-size: .65em
     margin-top: 5px
 
@@ -27,24 +28,14 @@
     color: rgba(255,255,255,.4)
 
 .project-link
-  font-size: 0
-  line-height: 0
+  font-size: 12px
+  line-height: 1
+  vertical-align: 28%
   position: relative
 
 .project-link:after
-  content: ''
-  display: inline-block
-  border: 1px solid
-  box-shadow: 0 0 0 2px $color-bg, -2px 2px 0 1px $color-line
-  height: 8px
-  width: 8px
-  position: absolute
-  top: -13px
-  transition: all .4s ease
-
-.project-link:hover:after
-  border-color: $color-link
-  background: $color-link
+  content: '¬'
+  padding-left: 3px
 
 @media (min-width: 550px)
   .projects .year

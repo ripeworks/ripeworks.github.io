@@ -1,7 +1,7 @@
 ---
 ---
 
-@import url(//fonts.googleapis.com/css?family=Dosis:300|Lato:100,300,400)
+@import url(//fonts.googleapis.com/css?family=Dosis:300|Lato:100,300,400|Overpass+Mono:100,300,400,600)
 
 @import "select"
 @import "grid"
@@ -10,15 +10,24 @@
 @import "heatmap"
 @import "code-highlight"
 
+// $font-mono: 'mplus-1m', sans-serif
+$font-mono: 'Overpass Mono', sans-serif
+$font-brand: 'Dosis', sans-serif
+
 @mixin font-mono($transform: uppercase)
-  font-family: 'mplus-1m', sans-serif
+  font-family: $font-mono
   font-weight: 200
   text-transform: $transform
 
-$color-bg: #114FBB
-$color-link: #79D6EA
-$color-link-border: rgba(121, 214, 234, .7)
+// $color-bg: #114FBB
+$color-bg: #3B293C
+$color-link: #FA3A4E
+$color-link-border: rgba(250, 58, 78, .7)
+$color-link-alt: #FAA0A9
 $color-line: rgba(255, 255, 255, .25)
+
+::selection
+  background: #ff3d53
 
 *
   box-sizing: border-box
@@ -27,7 +36,7 @@ html
   color: white
   color: rgba(255,255,255,.9)
   @include font-mono(none)
-  font-size: 120%
+  font-size: 18px
   height: 100%
   text-size-adjust: none
   text-rendering: optimizeLegibility
@@ -65,8 +74,9 @@ h1, h2
   text-transform: none
 
 h3
-  font-size: 1.25em
-  // color: #FFE59C
+  letter-spacing: 0.05em
+  font-size: 1em
+  font-weight: bold
 
 h5
   color: white
@@ -91,7 +101,7 @@ header
 
 header #logo
   background: url('/img/Logo@2x.png') no-repeat left top
-  font-family: 'Dosis', sans-serif
+  font-family: $font-brand
   font-size: 60px
 
   a
@@ -116,12 +126,14 @@ header .select
   margin: 2em auto
 
   h1
-    color: #B4F3E5
+    color: $color-link-alt
+    font-family: $font-brand
     font-size: 3em
     font-weight: 100
+    letter-spacing: 0.05em
 
     span
-      color: #00FCD6
+      color: $color-link
       display: block
 
   button
@@ -164,11 +176,14 @@ ul
     content: '+ '
     font-family: monospace
 
+ol
+  list-style-position: inside
+
 ul.list li:before
   content: ''
 
 .col.three h3
-  margin: .75em 0 .25em 0
+  margin: 1em 0 .25em 0
 
 .alt
   // background: white
@@ -179,11 +194,14 @@ ul.list li:before
 article
   line-height: 1.66667
   font-family: 'Lato', sans-serif
-  font-weight: 300
+  font-weight: 400
 
   h1, h2, h3, h4, h5, h6
-    font-family: 'mplus-1m', sans-serif
-    font-weight: 100
+    font-family: $font-mono
+    font-weight: 200
+
+  h2
+    font-size: 1.5em
 
 blockquote
   border-left: 1px solid rgba(144, 246, 233, 0.7)
